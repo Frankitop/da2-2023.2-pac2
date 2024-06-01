@@ -1,1 +1,7 @@
-<p>detail works!</p>
+<ul>
+    <li *ngFor="let fact of facts; let i = index" [ngClass]="{ 'highlight': i === facts.length - 1 }">
+      {{ fact.data }}
+    </li>
+  </ul>
+
+<button type="submit" class="btn btn-primary" routerLink="/catfacts">Go to Catfact</button>

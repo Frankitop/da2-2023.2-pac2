@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CatFactsService } from '../service/catfacts.service';
+import { CatFact } from '../interfaces/catFact';
+
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  facts: CatFact[] = [];
+
+  constructor(private catfactsService: CatFactsService) { }
 
   ngOnInit(): void {
+    this.facts = this.catfactsService.getAllFacts();
   }
 
 }
