@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 
 import { CatfactSearchComponent } from './catfact-search/catfact-search.component';
 import { HomeComponent } from './home/home.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CatfactSearchComponent,
     HomeComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,
