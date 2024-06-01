@@ -1,5 +1,13 @@
 
 
 <form>
-    <button type="submit" class="btn btn-primary" (click)="getCatFact()">Search cat fact</button>
-  </form>
+  <button type="submit" class="btn btn-primary" (click)="getCatFact()">Search cat fact</button>
+  
+  <div>
+    <div *ngIf="catFact">
+      {{ catFact }}
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary" *ngIf="showButton" href="/detail">Go to Details</button>
+</form>
